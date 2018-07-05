@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Hack:style=Regular:size=10:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -83,29 +83,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-unsigned int alpha = 0xcd;
+unsigned int alpha = 0xff;
 
 static const char *colorname[] = {
-	"#073642",  /*  0: black    */
-	"#dc322f",  /*  1: red      */
-	"#859900",  /*  2: green    */
-	"#b58900",  /*  3: yellow   */
-	"#268bd2",  /*  4: blue     */
-	"#d33682",  /*  5: magenta  */
-	"#2aa198",  /*  6: cyan     */
-	"#eee8d5",  /*  7: white    */
-	"#002b36",  /*  8: brblack  */
-	"#cb4b16",  /*  9: brred    */
-	"#586e75",  /* 10: brgreen  */
-	"#657b83",  /* 11: bryellow */
-	"#839496",  /* 12: brblue   */
-	"#6c71c4",  /* 13: brmagenta*/
-	"#93a1a1",  /* 14: brcyan   */
-	"#fdf6e3",  /* 15: brwhite  */
+	"#282828",  /*  0: black    */
+	"#cc241d",  /*  1: red      */
+	"#98971a",  /*  2: green    */
+	"#d79921",  /*  3: yellow   */
+	"#458588",  /*  4: blue     */
+	"#b16286",  /*  5: magenta  */
+	"#689d6a",  /*  6: cyan     */
+	"#a89984",  /*  7: white    */
+	"#928374",  /*  8: brblack  */
+	"#fb4934",  /*  9: brred    */
+	"#b8bb26",  /* 10: brgreen  */
+	"#fabd2f",  /* 11: bryellow */
+	"#83a598",  /* 12: brblue   */
+	"#d3869b",  /* 13: brmagenta*/
+	"#8ec07c",  /* 14: brcyan   */
+	"#ebdbb2",  /* 15: brwhite  */
 	/* more colors can be added after 255 to use with DefaultXX */
-	"black",   /* 256 -> bg */
-	"#00cc00", /* 257 -> fg */
-    "magenta"  /* 258 -> cursor */
+	"#282828",   /* 256 -> bg */
+	"#ebdbb2", /* 257 -> fg */
+    "ebdbb2"  /* 258 -> cursor */
 };
 
 
@@ -114,7 +114,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 12;
-unsigned int defaultbg = 256;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 14;
 static unsigned int defaultrcs = 15;
 
